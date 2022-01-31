@@ -28,8 +28,8 @@ let classNotFull=confirm('is there space in the class?');
 
 let noScheduleConflict=confirm('Is your Schedule clear?');
 
-let canEnrollInClass=(classNotFull && noScheduleConflict)
-console.log(canEnrollInClass)
+let canEnrollInClass=(classNotFull && noScheduleConflict);
+alert('it is '+canEnrollInClass +' you can enroll in class')
 
 let premiumMember=confirm('Is this a premium member?');
 
@@ -39,4 +39,4 @@ let offerNotExpired=confirm('Is the offer still valid');
 
 let applyOffer=(premiumMember || moreThanTwoItems && offerNotExpired);
 
-console.log(applyOffer)
+alert('it is '+applyOffer+' you can apply offer')

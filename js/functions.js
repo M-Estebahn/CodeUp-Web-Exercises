@@ -53,7 +53,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 function isTwo(num){
-    return num === 2
+    return num === 2;
 }
 
 console.log(isTwo(random));
@@ -73,7 +73,7 @@ function calculateTip(bill,tipPercent){
 }
 
 console.log(calculateTip(20, .20));
-console.log(calculateTip(25.50, 25));
+console.log(calculateTip(25.50, .25));
 console.log(calculateTip(33.42, .15));
 /**
  * TODO:
@@ -83,13 +83,12 @@ console.log(calculateTip(33.42, .15));
  */
 
 
-function calculateTip1() {
-    let bill= Number (prompt('How much was your total bill?'))
-    let tipPercent= Number (prompt('What is your desired tip percentage')) /100
-    return alert ('you should tip $'+ (bill * tipPercent));
-}
 
-calculateTip1()
+    let totalBill= Number (prompt('How much was your total bill?'))
+    let tipPercentage= Number (prompt('What is your desired tip percentage')) /100
+    let tipTotal= (calculateTip(totalBill,tipPercentage));
+    alert('you should pay $'+tipTotal+' as a tip');
+
 
 /**
  * TODO:

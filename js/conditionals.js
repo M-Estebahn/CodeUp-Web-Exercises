@@ -21,20 +21,20 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-// function analyzeColor(string){
-//     if (string==='red')
-//         return 'red is the color of fruit punch';
-//   else if (string==='orange')
-//         return 'orange is also a fruit';
-//     else if (string==='yellow')
-//         return 'yellow is the color of lemons';
-//     else if (string==='green')
-//         return 'green is the color of limes';
-//     else if (string==='blue')
-//         return 'blue is the color of water';
-//     else
-//         return 'I don\' know anything about ' + string
-// }
+function analyzeColor(string){
+    if (string==='red')
+        return 'red is the color of fruit punch';
+  else if (string==='orange')
+        return 'orange is also a fruit';
+    else if (string==='yellow')
+        return 'yellow is the color of lemons';
+    else if (string==='green')
+        return 'green is the color of limes';
+    else if (string==='blue')
+        return 'blue is the color of water';
+    else
+        return 'I don\' know anything about ' + string
+}
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -84,27 +84,27 @@ switch(randomColor){
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// let string = prompt('Quick tell me a color and I\'ll tell you what I know about it!')
-//
-// switch(string){
-//     case 'red':
-//         alert ('red is the color of fruit punch');
-//         break;
-//     case 'orange':
-//         alert('orange is also a fruit');
-//         break;
-//     case 'yellow':
-//         alert('yellow is the color of lemons');
-//         break;
-//     case 'green':
-//         alert('green is the color of limes');
-//         break;
-//     case 'blue':
-//         alert('blue is the color of water')
-//         break;
-//     default:
-//         alert('I don\'t know anything about ' + string)
-// }
+let string = prompt('Quick tell me a color and I\'ll tell you what I know about it!')
+
+switch(string){
+    case 'red':
+        alert ('red is the color of fruit punch');
+        break;
+    case 'orange':
+        alert('orange is also a fruit');
+        break;
+    case 'yellow':
+        alert('yellow is the color of lemons');
+        break;
+    case 'green':
+        alert('green is the color of limes');
+        break;
+    case 'blue':
+        alert('blue is the color of water')
+        break;
+    default:
+        alert('I don\'t know anything about ' + string)
+}
 /* ########################################################################## */
 
 /**
@@ -165,11 +165,11 @@ calculateTotal(8,100);
  */
 //Generate a random number between 0 and 6
 
-// var luckyNumber = Math.floor(Math.random() * 6);
-// let totalBill=Number(prompt('What was your bill total?'));
-// alert ('Your lucky number is '+luckyNumber);
-// alert ('Your Total was $'+totalBill);
-// alert('your new total is $'+ calculateTotal(luckyNumber,totalBill));
+var luckyNumber = Math.floor(Math.random() * 6);
+let totalBill=Number(prompt('What was your bill total?'));
+alert ('Your lucky number is '+luckyNumber);
+alert ('Your Total was $'+totalBill);
+alert('your new total is $'+ calculateTotal(luckyNumber,totalBill));
 
 
 
@@ -192,42 +192,42 @@ calculateTotal(8,100);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-function isEvenOrOdd(num) {
-    if (num !== num) {
-        return alert('your input is not the correct data type 1');
-    }else if (num % 2 !== 0) {
-        return alert(num + ' is an odd number.');
-    }else if (num % 2 ===0) {
-        return alert(num + ' is an even Number');
-}
-}
-function plus100(num){
-    if (num!==num) {
-        return alert('your input is not the correct data type 2');
-    }else {
-        return alert('your number plus 100 is ' + (num + 100));
+    function isEvenOrOdd(num) {
+        if (isNaN(num)) {
+            return ('your input is not the correct data type to determine Even or Odd');
+        }else if (num % 2 !== 0) {
+            return (num + ' is an odd number.');
+        }else if (num % 2 ===0) {
+            return (num + ' is an even Number');
+        }
     }
-}
-function isNegativeOrPositive(num) {
-    if (num > 0) {
-        return alert(num + ' is a positive number!');
-    } else if (num < 0) {
-        return alert(num + ' is a negative number');
-    } else if (num === 0) {
-        return alert('Your number is 0');
-    } else if (num !== num) {
-        return alert('your input is not the correct data type 3');
+    function plus100(num){
+        if (isNaN(num)) {
+            return ('your input is not the correct data type to add 100');
+        }else {
+            return ('your number plus 100 is ' + (num + 100));
+        }
+    }
+    function isNegativeOrPositive(num) {
+        if (num > 0) {
+            return (num + ' is a positive number!');
+        } else if (num < 0) {
+            return (num + ' is a negative number');
+        } else if (num === 0) {
+        return ('Your number is 0');
+    } else if (isNaN(num)) {
+        return ('your input is not the correct data type to determine Negative or Positive');
     }
 }
 
-function getNumber() {
+    function getNumber() {
     if (confirm('would you like to enter a Number?') === false) {
         return alert('That\'s too bad.');
     } else{
         let userInput = Number(prompt('Enter the Number here.'));
-        isEvenOrOdd(userInput);
-        plus100(userInput);
-        isNegativeOrPositive(userInput);
+        alert(isEvenOrOdd(userInput));
+       alert(plus100(userInput));
+        alert(isNegativeOrPositive(userInput));
     }
 }
 

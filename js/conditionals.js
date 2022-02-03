@@ -35,6 +35,10 @@ function analyzeColor(string){
     else
         return 'I don\' know anything about ' + string
 }
+console.log(analyzeColor('red'));
+console.log(analyzeColor('blue'));
+console.log(analyzeColor('purple'));
+console.log(analyzeColor('green'));
 
 // Don't change the next two lines!
 // These lines create two variables for you:

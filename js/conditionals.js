@@ -21,24 +21,24 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzeColor(string){
-    if (string==='red')
-        return 'red is the color of fruit punch';
-  else if (string==='orange')
-        return 'orange is also a fruit';
-    else if (string==='yellow')
-        return 'yellow is the color of lemons';
-    else if (string==='green')
-        return 'green is the color of limes';
-    else if (string==='blue')
-        return 'blue is the color of water';
-    else
-        return 'I don\' know anything about ' + string
-}
-console.log(analyzeColor('red'));
-console.log(analyzeColor('blue'));
-console.log(analyzeColor('purple'));
-console.log(analyzeColor('green'));
+// function analyzeColor(string){
+//     if (string==='red')
+//         return 'red is the color of fruit punch';
+//   else if (string==='orange')
+//         return 'orange is also a fruit';
+//     else if (string==='yellow')
+//         return 'yellow is the color of lemons';
+//     else if (string==='green')
+//         return 'green is the color of limes';
+//     else if (string==='blue')
+//         return 'blue is the color of water';
+//     else
+//         return 'I don\' know anything about ' + string
+// }
+// console.log(analyzeColor('red'));
+// console.log(analyzeColor('blue'));
+// console.log(analyzeColor('purple'));
+// console.log(analyzeColor('green'));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -59,28 +59,28 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 
+function analyzeColor(str) {
+    switch (str) {
+        case 'red':
+            return 'red is the color of fruit punch';
 
-switch(randomColor){
-    case 'red':
-        console.log('red is the color of fruit punch');
-        break;
-    case 'orange':
-        console.log('orange is also a fruit');
-        break;
-    case 'yellow':
-        console.log('yellow is the color of lemons');
-            break
-    case 'green':
-        console.log('green is the color of limes');
-            break
-    case 'blue':
-        console.log('blue is the color of water')
-                break
-    default:
-        console.log('I don\'t know anything about ' + randomColor)
-        break
+        case 'orange':
+            return 'orange is also a fruit';
+
+        case 'yellow':
+            return 'yellow is the color of lemons';
+
+        case 'green':
+            return 'green is the color of limes';
+
+        case 'blue':
+            return 'blue is the color of water'
+
+        default:
+            return ('I don\'t know anything about ' + randomColor)
+
+    }
 }
-
 
 /**
  * TODO:
@@ -88,27 +88,11 @@ switch(randomColor){
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-let string = prompt('Quick tell me a color and I\'ll tell you what I know about it!')
+let color = prompt('Quick tell me a color and I\'ll tell you what I know about it!')
 
-switch(string){
-    case 'red':
-        alert ('red is the color of fruit punch');
-        break;
-    case 'orange':
-        alert('orange is also a fruit');
-        break;
-    case 'yellow':
-        alert('yellow is the color of lemons');
-        break;
-    case 'green':
-        alert('green is the color of limes');
-        break;
-    case 'blue':
-        alert('blue is the color of water')
-        break;
-    default:
-        alert('I don\'t know anything about ' + string)
-}
+alert(analyzeColor(color));
+
+
 /* ########################################################################## */
 
 /**

@@ -77,7 +77,7 @@ function analyzeColor(str) {
             return 'blue is the color of water'
 
         default:
-            return ('I don\'t know anything about ' + randomColor)
+            return ('I don\'t know anything about ' + str)
 
     }
 }
@@ -126,10 +126,8 @@ let calculateTotal = function(luck,price) {
             return(price - (price * .50));
         case (5):
             return(0);
-        case (0):
-            return(price);
         default:
-            return('input not valid');
+            return(price);
     }
 }
 

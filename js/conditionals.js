@@ -60,7 +60,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 
 function analyzeColor(str) {
-    switch (str) {
+    switch (str.toLowerCase()) {
         case 'red':
             return 'red is the color of fruit punch';
 
@@ -82,13 +82,14 @@ function analyzeColor(str) {
     }
 }
 
+
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-let color = prompt('Quick tell me a color and I\'ll tell you what I know about it!')
+let color = prompt('Quick tell me a color and I\'ll tell you what I know about it!');
 
 alert(analyzeColor(color));
 
@@ -152,7 +153,9 @@ calculateTotal(8,100);
 //Generate a random number between 0 and 6
 
 var luckyNumber = Math.floor(Math.random() * 6);
+
 let totalBill=Number(prompt('What was your bill total?'));
+
 alert ('Your lucky number is '+luckyNumber);
 alert ('Your Total was $'+totalBill);
 alert('your new total is $'+ calculateTotal(luckyNumber,totalBill));

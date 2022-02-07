@@ -15,10 +15,10 @@ do{
     if(allCones === 0) {
         console.log('Yay! I sold them all');
         break;
-    }else if (conesBought >= allCones) {
+    }else if (conesBought > allCones) {
         console.log('I cannot sell you ' + conesBought + ' I only have ' + allCones + ' left',allCones);
         break;
-    }else (conesBought <= allCones); {
+    }else (conesBought < allCones); {
     console.log(conesBought + ' Cones sold',allCones);
     }allCones=allCones-conesBought
 

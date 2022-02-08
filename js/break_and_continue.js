@@ -3,7 +3,7 @@
 
 for(var i=0;i<10;i++) {
     var userOddNumber = prompt('Please give me an odd number between 1-50')
-    if (userOddNumber % 2 !== 0 && userOddNumber > 1 && userOddNumber < 50) {
+    if (userOddNumber % 2 !== 0 && userOddNumber >= 1 && userOddNumber <= 50) {
         console.log('Number to skip is ' + userOddNumber)
         break;
     }

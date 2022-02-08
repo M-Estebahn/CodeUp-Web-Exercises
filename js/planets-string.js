@@ -10,7 +10,7 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-planetsArray=planetsString.split('|')
+planetsArray=planetsString.split('|');
      console.log(planetsArray);
 
     /**
@@ -20,14 +20,17 @@ planetsArray=planetsString.split('|')
      *
      */
     planetsString = "Mercury<br>Venus<br>Earth<br>Mars<br>Jupiter<br> Saturn <br> Uranus <br> Neptune";
-    console.log(planetsString)
-    planetsArray=planetsString.split('<br>')
-    console.log(planetsArray)
+    console.log(planetsString);
+    planetsArray=planetsString.split('<br>');
+    console.log(planetsArray);
+     document.write(planetsString)
     /**
      * BONUS:
      * Create another string that would display your planets in an undordered
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-        let unorderedPlanets = '<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>'
+    let unorderedPlanets = '<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>'
+    document.write(unorderedPlanets);
 })();
+

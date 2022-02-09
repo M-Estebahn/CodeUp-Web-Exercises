@@ -71,13 +71,22 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-    var books=[
-        {title:'Hurt', author:{firstName:'Johnny', lastName:'Cash'}},
-        {title: 'Faith', author: {firstName: 'Limp',lastName: 'Bizkit'}},
-        {title: 'All Along the Watchtower',author: {firstName: 'Jimi',lastName: 'Hendrix'}},
-        {title: 'Tainted Love', author: {firstName: 'Marilyn',lastName: 'Manson'}},
-        {title: 'American Woman', author: {firstName: 'Lenny',lastName: 'Kravitz'}}
-    ]
+    var books=[]
+
+    function createBook(book,authorFirst,authorLast){
+        books.push({title:book,author:{firstName:authorFirst,lastName: authorLast}})
+    }
+    createBook('Sweet child O\' Mine','Guns &','Roses');
+    createBook('Three Little Birds', 'Bob', 'Marley');
+    createBook('Hurt','Johnny','Cash');
+    createBook('Faith','Limp','Bizkit');
+    createBook('All Along the Watchtower','Jimi','Hendrix');
+    createBook('Tainted Love','Marilyn', 'Manson');
+    createBook('American Woman','Lenny','Kravitz')
+
+
+    console.log(books)
+
     console.log(books[0].title)
     console.log(books[0].author.firstName)
     console.log(books[0].author.lastName)
@@ -105,9 +114,13 @@
      *      ---
      *      ...
      */
-books.forEach(function(book) {
-    console.log('Title: ' + book.title + ' ' + 'Author: ' + book.author.firstName + ' ' + book.author.lastName)
-})
+function showBooks(){
+    for (var i=0;i<books.length;i++){
+        console.log('Book #'+(i+1))
+        console.log('Title: '+books[i].title)
+        console.log('Author: '+books[i].author.firstName+' '+books[i].author.lastName)
+
+    }}
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -119,4 +132,13 @@ books.forEach(function(book) {
      *   `showBookInfo` function.
      */
 
+// function createBook(book,authorFirst,authorLast){
+//    books.push({title:book,author:{firstName:authorFirst,lastName: authorLast}})
+//     }
+//     createBook('Sweet child O\' Mine','Guns &','Roses')
+//     createBook('Three Little Birds', 'Bob', 'Marley')
+//
+// console.log(books)
+
+showBooks()
 })();

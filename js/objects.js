@@ -27,7 +27,7 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
     person.sayHello=function () {
-        return 'Hello from Estebahn Molina!';
+        return 'Hello from ' +person.firstname+' '+person.lastname;
     };
     console.log(person.sayHello())
     /** TODO:

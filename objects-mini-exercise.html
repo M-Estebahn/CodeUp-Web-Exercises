@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects Mini exercise</title>
+</head>
+<body>
+-- Mini Exercise 1
+Create a few beverage objects and assign values to each object for the following properties:
+- brandName
+- type
+- volumeInLiters
+- priceInCents
+- expirationDate
+- datesOfPreviousSips (use an array of strings)
+- isOpen
+Define your objects using both literal syntax to create all properties and values at once and also try defining empty objects and assign property values in separate statements using the dot notation.
+    <script>
+var coke={
+    brandName:'Coke-a-Cola',
+    type:'Cola',
+    volumeInLiters:'1',
+    priceInCents:'200',
+    expirationDate:'12-20-29',
+    datesOfPreviousSips:['1/2/22','2/2/22','3/2/22'],
+    isOpen:'yes',
+}
+var pepsi={}
+pepsi.brandName='PepsiCola'
+pepsi.type='Cola'
+pepsi.volumeInLiters='2'
+pepsi.priceInCents='400'
+pepsi.expirationDate='1/20/23'
+pepsi.datesOfPreviousSips=['1/1/22','1/2/22','1/3/22']
+pepsi.isOpen='yes'
+
+var sprite={
+    brandName:'Sprite',
+    type:'lemon lime soft drink',
+    volumeInLiters:'3',
+    priceInCents:'250',
+    expirationDate:'11/20/22',
+    datesOfPreviousSips:[],
+    isOpen:'no'
+}
+
+var drinks=[coke,pepsi,sprite]
+
+console.log(drinks)
+drinks[drinks.indexOf(sprite)].datesOfPreviousSips.push('12/3/12','2/5/22','3/4/17')
+
+console.log(drinks[drinks.indexOf(sprite)].datesOfPreviousSips[(drinks.length)-1])
+
+
+// var users =  [
+//     {
+//         givenName: 'Sam',
+//         age: 21
+//     },
+//     {
+//         givenName: 'Cathy',
+//         age: 34
+//     },
+//     {
+//         givenName: 'Karen',
+//         age: 43
+//     }
+// ];
+// 1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
+// 2. Change the names of all users to “John Doe”
+//   3. Increase the current age of all users by 1
+// Can you accomplish each step using iteration?
+
+// console.log(users[0].givenName,users[1].givenName,users[2].givenName)
+// var nameString=''
+//
+// for(var i=0;i<users.length;i+=1){
+//     nameString=+users[i].givenName+' '
+//     console.log(nameString)
+// }
+
+// users.forEach(function (user){
+//     user.givenName='John Doe'
+// })
+// console.log(users)
+// users.forEach(function(user){
+//     user.age=user.age+1
+// })
+// console.log(users)
+
+var user= {
+    givenName:'Justin',
+    age:25,
+    sayHello:function(input){
+        console.log(input);
+                      }
+}
+
+
+    </script>
+</body>
+</html>

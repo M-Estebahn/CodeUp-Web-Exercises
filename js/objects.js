@@ -119,6 +119,7 @@ function showBooks(){
         console.log('Book #'+(i+1))
         console.log('Title: '+books[i].title)
         console.log('Author: '+books[i].author.firstName+' '+books[i].author.lastName)
+        console.log('----')
 
     }}
     /**

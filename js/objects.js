@@ -114,14 +114,20 @@
      *      ---
      *      ...
      */
-function showBooks(){
-    for (var i=0;i<books.length;i++){
-        console.log('Book #'+(i+1))
-        console.log('Title: '+books[i].title)
-        console.log('Author: '+books[i].author.firstName+' '+books[i].author.lastName)
+// function showBooks(){
+//     for (var i=0;i<books.length;i++){
+//         console.log('Book #'+(i+1))
+//         console.log('Title: '+books[i].title)
+//         console.log('Author: '+books[i].author.firstName+' '+books[i].author.lastName)
+//         console.log('----')
+//
+//     }}
+    books.forEach(function(book,index){
+        console.log('Book #'+(index+1))
+        console.log('Title: '+book.title)
+        console.log('Author: '+book.author.firstName+' '+book.author.lastName)
         console.log('----')
-
-    }}
+    })
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author

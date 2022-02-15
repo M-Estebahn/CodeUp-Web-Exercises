@@ -5,7 +5,7 @@
     <title>Register With Us</title>
 </head>
 <body>
-<form method="POST " action="https://request-inspector.glitch.me">
+<form method="GET" action="https://request-inspector.glitch.me">
     <label for="email">Email</label>
     <br>
     <input id="email" name="email" type="text" placeholder="Your Email here">
@@ -20,18 +20,18 @@
     <br>
     <h2>How did you hear about us?</h2>
     <br>
-    <label for="Billboard">Billboard</label><input id="Billboard" type="radio" name="reference" value="billboard">
+    <label for="Billboard">Billboard</label><input id="Billboard" type="checkbox" name="reference" value="billboard">
     <br>
-    <label for="Radio" >Radio Advertisement</label> <input id="Radio" type="radio" name="reference"    value="radio">
+    <label for="Radio" >Radio Advertisement</label> <input id="Radio" type="checkbox" name="reference"    value="radio">
     <br>
-    <label for="Internet"> Internet Advertisement</label><input id="Internet" type="radio" name="reference" value="internet">
+    <label for="Internet"> Internet Advertisement</label><input id="Internet" type="checkbox" name="reference" value="internet">
     <br>
-    <label for="Other">Other</label><input id="Other" type="radio" name="reference" value="other">
+    <label for="Other">Other</label><input id="Other" type="checkbox" name="reference" value="other">
     <br>
     <h2>What Web Browser are you using?</h2>
-    <lable for="Browsers">Web Browsers</lable>
+    <label for="Browsers">Web Browsers</label>
     <br>
-    <select name="Browsers">
+    <select name="Browsers" id="Browsers">
         <option value="Chrome">Google Chrome</option>
         <option value="Firefox">Firefox</option>
         <option value="Safari">Safari</option>

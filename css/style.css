@@ -4,7 +4,7 @@
     text-align: center;
 }
 h2{
-    color: aqua;
+    color: cornflowerblue;
     text-decoration: underline;
 }
  body {
@@ -19,3 +19,33 @@ h2{
      background-repeat: no-repeat;
      background-position:right;
  }
+ul{
+    list-style: circle;
+
+}
+tr>td{
+    font-size: 2em;
+    padding: 4px;
+    text-align: left;
+    border:3px darkred solid;
+}
+table{
+    border:3px cornflowerblue  dashed;
+
+}
+th{
+    background-color: darkred;
+}
+a:link{
+    color: aqua;
+}
+a:visited{
+    color: purple;
+}
+a:hover{
+    color: greenyellow;
+    font-size: 2em;
+}
+a:active{
+    color: darkmagenta;
+}

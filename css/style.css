@@ -1,4 +1,21 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
 }
+h2{
+    color: aqua;
+    text-decoration: underline;
+}
+ body {
+    background-color: black;
+    color: white;
+     font-family: AppleGothic,Arial,"Times New Roman";
+
+}
+ main{
+     background-image: url("../img/veridian-logo.jpg");
+     background-size: 400px ;
+     background-repeat: no-repeat;
+     background-position:right;
+ }

@@ -36,49 +36,149 @@
     <!-- Jumbotron -->
     <div
             class="bg-image px-0  py-4 text-center shadow-1-strong rounded mb-5 me-3 text-white "
-            style="background-image: url('img/pizza.png'); width: 100%"
+            style="background-image: url('img/pizza.png'); width: 100%; height:auto"
     >
-        <h1 class="mb-3 h2 bg-light bg-opacity-75 text-dark text-opacity-50 display-3" >Welcome to Pizza World!</h1>
+        <h1 class="mb-3 h2 bg-light bg-opacity-75 text-dark text-opacity-50 display-3 my-auto" >Welcome to Pizza World!</h1>
     </div>
     <!-- Jumbotron -->
 <!-- main card  -->
     <div class="px-4" >
         <h1 class="ms-2">Build Your Own Pizza!</h1>
-        <div class="card border-1 mx-2 " style="width:100%;">
-            <div class="card-header bg-primary text-white">
-                Choose size and crust
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Size and crust</button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Cheese and Sauce</button>
+                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Toppings</button>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                 <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                        Hand tossed
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-size" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="card border-1 mx-2 " style="width:100%;">
+                    <div class="card-header bg-primary text-white">
+                        Choose size and crust
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Garlic season crust with a rich, buttery taste.</li>
-                        <li class="list-group-item"><input type="radio" name="tossed"> Small (10")</li>
-                        <li class="list-group-item"><input type="radio" name="tossed"> Medium(12")</li>
+                        <li class="list-group-item">
+                            <div class="card" style="width: 100%;">
+                                <div class="card-header">
+                                    Hand tossed
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Garlic season crust with a rich, buttery taste.</li>
+                                    <li class="list-group-item"><input type="radio" name="tossed"> Small (10")</li>
+                                    <li class="list-group-item"><input type="radio" name="tossed"> Medium(12")</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="card" style="width: 100%;">
+                                <div class="card-header">
+                                    Crispy Thin
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Thin enough for optimum crispy to crunch ration</li>
+                                    <li class="list-group-item"><input type="radio" name="thin"> Medium (12")</li>
+                                    <li class="list-group-item"><input type="radio" name="thin"> Large (14")</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                      <div class="card" style="width: 100%;">
-                        <div class="card-header">
-                            Crispy Thin
+                    <div class="card-footer text-muted d-flex justify-content-end">
+                        <button class="bg-primary text-white " type="submit">Next</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-Cheese" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="card border-1 mx-2 " style="width:100%;">
+                    <div class="card-header bg-primary text-white">
+                        Choose Cheese and Sauce
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="card" style="width: 100%;">
+                                <div class="card-header">
+                                    Cheese
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">How much?</li>
+                                    <li class="list-group-item"><input type="radio" name="tossed"> light</li>
+                                    <li class="list-group-item"><input type="radio" name="tossed"> normal</li>
+                                    <li class="list-group-item"><input type="radio" name="tossed"> extra</li>
+                                    <li class="list-group-item"><input type="radio" name="tossed"> double</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="card" style="width: 100%;">
+                                <div class="card-header">
+                                    Sauce
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">What Type?</li>
+                                    <li class="list-group-item"><input type="radio" name="thin"> drop down</li>
+                                    <li class="list-group-item"> How Much?</li>
+                                    <li class="list-group-item"><input type="radio" name="thin"> drop down</li>
+
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-footer text-muted d-flex justify-content-end">
+                        <button class="bg-primary text-white " type="submit">Previous</button>
+                        <button class="bg-primary text-white " type="submit">Next</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-Toppings" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="card border-1 mx-2 " style="width:100%;">
+                        <div class="card-header bg-primary text-white">
+                            Choose Toppings
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Thin enough for optimum crispy to crunch ration</li>
-                            <li class="list-group-item"><input type="radio" name="thin"> Medium (12")</li>
-                            <li class="list-group-item"><input type="radio" name="thin"> Large (14")</li>
+                            <li class="list-group-item">
+                                <div class="card" style="width: 100%;">
+                                    <div class="card-header">
+                                        Choose Meats
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Fresh never frozen Meats</li>
+                                        <li class="list-group-item"><input type="checkbox" name=meats> Beef</li>
+                                        <li class="list-group-item"><input type="checkbox" name=meats> Ham</li>
+                                        <li class="list-group-item"><input type="checkbox" name=meats> Philly Steak</li>
+                                        <li class="list-group-item"><input type="checkbox" name=meats> Bacon</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="card" style="width: 100%;">
+                                    <div class="card-header">
+                                        Choose Non-Meats
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Locally sourced veggies and fruits</li>
+                                        <li class="list-group-item"><input type="checkbox" name="extras"> Green Peppers</li>
+                                        <li class="list-group-item"><input type="checkbox" name="extras"> Mushrooms </li>
+                                        <li class="list-group-item"><input type="checkbox" name="extras"> Onions </li>
+                                        <li class="list-group-item"><input type="checkbox" name="extras"> Jalepeño Peppers</li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
-                       </div>
-                </li>
-            </ul>
-            <div class="card-footer text-muted d-flex justify-content-end">
-                <button class="bg-primary text-white " type="submit">Order</button>
+                        <div class="card-footer text-muted d-flex justify-content-end">
+                            <button class="bg-primary text-white " type="submit">Previous</button>
+                            <button class="bg-primary text-white " type="submit">Order</button>
 
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        </ul>
+
     </div>
 
 </main>

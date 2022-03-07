@@ -61,7 +61,8 @@
             for (var i=0;i<listItems.length;i++){
                 if(i% 2!==0){
                     listItems[i].style.color='#808080';
-                } listItems[0].style.color='#0000ff';
+                } if (listItems[i].getAttribute('data-dbid')=== '1')
+                    listItems[i].style.color='#0000ff';
             }        }
         document.getElementById('everOtherBtn').addEventListener('click',everyOthergrey)
 

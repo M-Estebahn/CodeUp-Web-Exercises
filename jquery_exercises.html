@@ -18,24 +18,31 @@
         <li id="third-li" class="list-item">list</li>
         <li id="codeup" class="li-4">items</li>
     </ul>
+
+
+
 </div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <script>
     'use strict';
-    $(document).ready(function () {
-    //    code here doesn't start until page fully loads
-      $('li').css('font-size','20px');
-      alert($('h1').html());
-      $('p').css('background', 'hotpink')
-      $('li').html('We are one')
-      $('li, h1, p').css('border','1px solid blue')
 
 
+        $('h1').click(function (){
+            $(this).css('background-color', 'green')
+        })
+        $('p').dblclick(function (){
+            $(this).css('font-size','18px')
+        })
+    $('li').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        }
+    );
 
-
-
-    });
 </script>
 </body>
 </html>

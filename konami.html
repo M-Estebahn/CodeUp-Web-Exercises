@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<p class="pew"></p>
+<p class="pew"></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RM60nNFfw-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<script src="/js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    let code=[]
+    let konamiCode=[38,38,40,40,37,39,37,39,66,65,13]
+    $('iframe').hide();
+
+    $(document).keyup(function(event){
+            console.log(event.keyCode);
+        code.push(event.keyCode);
+
+        for (var i=0;i< code.length; i++){
+            if(code[i]!== konamiCode[i])
+                code=[];
+        }
+        if (code.length===konamiCode.length){
+                alert('You have added 30 lives!');
+                $('body').css('background', 'black');
+                $('h1').css('color', 'red');
+                $('p').html('pew pew pew pew pew');
+                $('.pew').css('color', 'white');
+                $('iframe').show()
+        }
+    });
+
+
+
+</script>
+</body>
+</html>

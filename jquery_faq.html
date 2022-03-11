@@ -12,9 +12,11 @@
             margin-top: 20px;
             margin-bottom: 10px;
             font-weight: 900;
-            background-color: rgba(255, 255, 255, 0.78);
+            background-color: rgba(7, 52, 9, 0.78);
             border-radius: 2em;
             padding: 1em;
+            color: #FFFFFF;
+            font-family: fantasy;
         }
         .invisible{
             visibility: hidden;
@@ -33,12 +35,14 @@
             margin:0;
         }
         div{
-            background-color: rgba(24, 6, 6, 0.8);
-            width: 25%;
+            background-color: rgba(255, 255, 255, 0.79);
+            width: 20%;
+            max-height:15em;
             border: 1px solid ;
             border-radius: 3em;
             margin: 1em auto;
-            padding: 12px;
+            padding: 10px;
+            overflow: scroll;
         }
         dl{
             display: flex;
@@ -52,7 +56,37 @@
             background-color: rgba(255, 255, 255, 0.79);
         }
         dd{
-            color: white;
+            color: black;
+            margin: auto;
+        }
+        .button{
+            margin: 0 auto;
+            text-align: center;
+
+        }
+        .other-parks{
+            color: #FFFFFF;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        h3{
+            text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 900;
+            background-color: rgba(7, 52, 9, 0.78);
+            border-radius: 2em;
+            padding: 1em;
+            color: #FFFFFF;
+            font-family: fantasy;
+            text-align: center;
+        }
+        ul{
+            color: black;
+        }
+        .green{
+            background-color: rgb(8, 61, 10);
         }
 
 
@@ -62,7 +96,9 @@
 
 
 <h1>Top Ten Questions about Glacier National Park</h1>
-
+<div class="button">
+    <button class="button1">Toggle Answers</button>
+</div>
 <dl>
    <div>
         <dt>Where is Glacier National Park located?</dt>
@@ -127,8 +163,43 @@
     </div>
 </dl>
 
-<button>Toggle Answers</button>
+    <div class="button green"><button class="button2">click me</button></div>
+<div class="other-parks green">
+    <div>
+        <h3>Park 1</h3>
+        <ul>
 
+                <li>Park 1 Fact1</li>
+                <li>Park 1 Fact2</li>
+                <li>Park 1 Fact3</li>
+                <li>Park 1 Fact4</li>
+
+        </ul>
+    </div>
+    <div>
+        <h3>Park 2</h3>
+        <ul>
+
+                <li>Park 2 Fact1</li>
+                <li>Park 2 Fact2</li>
+                <li>Park 2 Fact3</li>
+                <li>Park 2 Fact4</li>
+
+        </ul>
+    </div>
+    <div>
+
+        <h3>Park 3</h3>
+        <ul>
+
+                <li>Park 3 Fact1</li>
+                <li>Park 3 Fact2</li>
+                <li>Park 3 Fact3</li>
+                <li>Park 3 Fact4</li>
+
+        </ul>
+    </div>
+</div>
 
 <script src="js/jquery-2.2.4.js"></script>
 
@@ -137,7 +208,7 @@
     // $('.invisible').css('visibility','hidden')
     // $('.highlight').css('background-color','green')
 
-    $('button').click(function () {
+    $('.button1').click(function () {
         $('dd').toggleClass('invisible');
     });
 
@@ -145,6 +216,20 @@
         $('dt').removeClass('highlight');
         $(this).toggleClass('highlight');
     });
+
+    $('.button2').click(function (){
+        $('ul').each(function (){
+            $(this).children().last().css('background','yellow').css('color','green')
+        })
+    })
+    $('h3').click(function (){
+            $(this).next().css('font-weight','bold')
+        })
+    $('li').click(function (){
+        $(this).parent().children().first().css('color','blue')
+    })
+
+
 
 </script>
 

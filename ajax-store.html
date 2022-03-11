@@ -8,19 +8,33 @@
 
     <title>Online Store</title>
     <style>
+        body{
+            background-color: #984912;
+        }
         #products{
             background-color: darkslategrey;
             width: auto;
 
         }
         dl{
-            color: #FFFFFF;
+            color: black;
+            background-color: white;
+            text-align: center;
+            width: 50%;
+            border-radius: 2px;
+            border: dashed #848487;
         }
         #button{
             text-align: center;
         }
         dt{
-            color: aqua;
+            color: saddlebrown;
+            margin:1px auto;
+            max-width: fit-content;
+        }
+        dd{
+            max-width: fit-content;
+            margin:1px auto;
         }
     </style>
 </head>
@@ -28,19 +42,9 @@
 
 <h1 class="text-center">My Tool Store</h1>
 
-<div id="products" class="d-flex p-2 justify-content-around my-2 mx-auto flex-wrap flex-md-row flex-sm-column container-fluid overflow-auto">
+<div id="products" class="d-flex p-1  my-2  flex-wrap">
 
-        <dl>
-            <dt>Title</dt>
-            <dd>toolName</dd>
-            <dt>Quantity</dt>
-            <dd>toolamount</dd>
-            <dt>Price</dt>
-            <dd>howmuch</dd>
-            <dt>Categories</dt>
-            <dd>iswhat?</dd>
-
-        </dl>
+      <img src="img/veridian-logo.jpg">
 
 </div>
 <div id="button"><button>refresh</button></div>
@@ -55,7 +59,7 @@
     function makeProducts(product) {
         let html =''
         for(let i=0; i<product.length;i++) {
-            html += '<dl class="col-sm-12 col-md-4">\n' +
+            html += '<dl>' +
                 '            <dt>Title:</dt>\n' +
                 '            <dd>' + Object.values(product[i])[0] + '</dd>\n' +
                 '            <dt>Quantity:</dt>\n' +

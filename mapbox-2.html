@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox 2</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div id='map' ></div>
+
+<button>opposite</button>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script>
+    'use strict';
+
+    mapboxgl.accessToken=MAPBOX_API_TOKEN
+
+
+
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style:'mapbox://styles/mapbox/streets-v11' , // style URL
+        center: [-77.05017599999996,38.8892686  ], // starting position [lng, lat]
+        zoom: 10 // starting zoom
+    });
+
+
+
+    const marker = new mapboxgl.Marker({
+        color: "#64c792",
+        draggable: true
+    })
+        marker.setLngLat([-77.05017599999996, 38.8892686]).addTo(map);
+
+
+    var popup= new mapboxgl.Popup({}).setText(
+        'lincoln memorial'
+    )
+        marker.setPopup(popup)
+
+
+    marker.on('dragend',function () {
+        popup.setText(marker.getLngLat())
+
+    })
+
+
+
+</script>
+
+</body>
+</html>

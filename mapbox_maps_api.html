@@ -15,7 +15,7 @@
 
 <div id='map' ></div>
 
-<button>opposite</button>
+
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
@@ -27,36 +27,89 @@
     mapboxgl.accessToken=MAPBOX_API_TOKEN
 
 
+    // Map
 
+
+    // set map to san antonio
+//     geocode('441 West Nakoma St, San Antonio, TX,',MAPBOX_API_TOKEN).then(function (data) {
+//         console.log(data);
+//         map.setCenter(data)
+//
+//     })
+//     // set marker for wiseguys
+//     const markerWiseguys = new mapboxgl.Marker({
+//         color: "#9ed762",
+//         draggable: false
+//     })
+//     markerWiseguys.setLngLat([-98.50030782254899, 29.55431933092472]).addTo(map)
+//
+// // Create popup for wise guys
+//     var popupWiseGuys= new mapboxgl.Popup({}).setHTML(
+//        ' <h1>Wiseguys</h1>'+'<h2>Italian Beef and Sausage Combo "Extra wet"</h2>'
+//     )
+//     // attach wiseguys popup to wiseguys marker
+//         markerWiseguys.setPopup(popupWiseGuys)
+
+
+    // finder marker and popup
+    //create finder marker
+    // const markerFinder= new mapboxgl.Marker({
+    //     color:"rgb(232,202,11)",
+    //     draggable:true,
+    // })
+    // markerFinder.setLngLat([-98.4003078, 29.4543193]).addTo(map)
+    // //create finder popup
+    //
+    // const popupFinder= new mapboxgl.Popup({}).setHTML(
+    //     '<h1>Finder</h1>'
+    //
+    // )
+    // //link marker finder to popup finder
+    // markerFinder.setPopup(popupFinder)
+    // // link functionality to marker and popup
+    //
+    // markerFinder.on('dragend',function () {
+    //     popupFinder.setText(markerFinder.getLngLat())
+    //
+    // })
+
+    // Tarka (-98.49906614187636, 29.60998781519463) el bucanero (-98.51788603750617, 29.580978458043802)
     const map = new mapboxgl.Map({
         container: 'map', // container ID
-        style:'mapbox://styles/mapbox/streets-v11' , // style URL
+        style:'mapbox://styles/mapbox/outdoors-v11', // style URL
         zoom: 10 // starting zoom
     });
-
-
-
-    const marker = new mapboxgl.Marker({
-        color: "#64c792",
-        draggable: false
+    geocode("16505 Blanco Rd, SA TX 78232",MAPBOX_API_TOKEN).then(function (data) {
+        map.setCenter(data)
     })
 
 
-    var popup= new mapboxgl.Popup({}).setText(
+const resturaunts =[
+    {"name":"Wiseguys",
+    "order":"Italian Beef and Sausage Combo 'Extra Wet'",
+    "address":"441 West Nakoma St, San Antonio, TX,"
+    },
+    {"name":"Tarka",
+    "order":"Mirch Masala",
+    "address":"427 N. Loop 1604 W. San Antonio, TX 78232"
+    },
+    {"name":"El Bucanero",
+     "order":"Beer n Seafood",
+     "address":"16505 Blanco Rd, SA TX 78232"}]
 
-    )
-        marker.setPopup(popup)
+    resturaunts.forEach(function (restaurant) {
+        geocode(restaurant.address,MAPBOX_API_TOKEN).then(function (data) {
+            var popup= new mapboxgl.Popup().setHTML(
+                '<h1>'+restaurant.name+'</h1>'+'<h2>'+restaurant.order+'</h2>'
+            );
+            var marker = new mapboxgl.Marker()
+                .setPopup(popup)
+                .setLngLat(data)
+                .addTo(map)
+        });
+        map.setZoom(11)
 
-
-
-        geocode('San Antonio, Texas',MAPBOX_API_TOKEN).then(function (data) {
-            console.log(data);
-            map.setCenter(data)
-        })
-
-
-
-
+    });
 
 
 </script>
